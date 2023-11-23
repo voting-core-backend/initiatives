@@ -1,0 +1,9 @@
+FROM python:3.8
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+RUN pip install pyarmor==6.8.1
+
+COPY ./ /server
+WORKDIR /server

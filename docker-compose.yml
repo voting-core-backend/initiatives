@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+    obfuscate:
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      command: bash obfuscate.sh
+      volumes:
+        - ./:/server

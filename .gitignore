@@ -1,0 +1,15 @@
+env/
+.idea/
+*.iml
+*.env.json
+
+*.sqlite3
+__pycache__/
+*.pyc
+docker/revision
+/venv
+/media
+*.log
+/postgres/
+/logs/
+

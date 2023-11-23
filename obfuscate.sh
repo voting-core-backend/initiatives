@@ -19,11 +19,11 @@ SRC_FILES=( $(find . -type f -name "*.py") )
 function generate_files() {
   for src_file in "${SRC_FILES[@]}"
   do
-    echo "PROCESSING '$src_file'"
-    pyarmor --silent obfuscate --restrict 0 --exact "$src_file"
+    echo "PROCESSING '${src_file:2}"
+    pyarmor --silent obfuscate --restrict 0 --exact "${src_file:2}"
 
-    file_name="$(basename "$src_file")"
-    dir_name="$DIST_DIR/$(dirname "$src_file")"
+    file_name="$(basename "${src_file:2}")"
+    dir_name="$DIST_DIR/$(dirname "${src_file:2}")"
 
     # Заменяем первую строку, чтобы работал импорт
     # для этого обязателен параметр `--restrict 0`
